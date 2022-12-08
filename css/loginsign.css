@@ -1,0 +1,392 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media only screen and (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 125rem;
+  /* BRO PLEASE CHECK IF max-height THIS IS BEEN USED OR NOT, IF NOT THEN REMOVE IT  */
+  max-height: 140rem;
+  padding: 0rem 6.4rem;
+}
+
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+
+button {
+  border: none;
+  display: inline-block;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/*****************************/
+/* HEADER */
+/*****************************/
+
+.home__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: rgb(42, 5, 5);
+  font-size: 1.2rem;
+  padding: 1.6rem 2.4rem;
+  letter-spacing: 0.5px;
+}
+.home__header-shipping span {
+  color: #b01e0d;
+  margin-right: 0.4rem;
+  font-weight: 600;
+  line-height: 1.8;
+}
+.home__header-track-order {
+  margin-left: auto;
+  margin-right: 3.2rem;
+}
+.home__header-track-order-link {
+  color: #fff;
+  font-size: 1.2rem;
+  white-space: nowrap;
+}
+.home__header-social-icons,
+.home__header .icon-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2.4rem;
+}
+.home__header-social-links,
+.home__header-social-links:visited {
+  color: #fff;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.home__header-social-links:hover,
+.home__header-social-links:active {
+  color: #e52b16;
+}
+
+/* Hamburger Menu */
+
+.hamburger-icon {
+  background-color: #000;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 2.4rem;
+}
+
+@media screen and (max-width: 48em) {
+  .container {
+    padding: 0rem 3.2rem;
+  }
+  .bgd-container {
+    height: 95vh;
+  }
+  .home__header-track-order {
+    margin-right: 0;
+  }
+  .home__header-social-icons {
+    display: none;
+  }
+  .home__header {
+    padding: 1.6rem 0;
+  }
+}
+
+@media screen and (max-width: 35em) {
+  .home__header-track-order {
+    display: none;
+  }
+  .home__header {
+    justify-content: center;
+  }
+}
+
+/*****************************/
+/* NAVIGATION */
+/*****************************/
+
+.logo {
+  font-size: 3.2rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #b01e0d;
+}
+.navbar-container {
+  position: relative;
+}
+.hamburger-container {
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.6rem 0 0;
+  flex-wrap: wrap;
+  text-align: left;
+  margin-left: auto;
+}
+
+.nav-list {
+  display: flex;
+  align-items: center;
+  margin: 0 auto 0 6.4rem;
+}
+
+@media screen and (max-width: 60em) {
+  .navbar-container {
+    display: none;
+  }
+  .icon-container {
+    display: none;
+  }
+  .hamburger-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 11;
+  }
+}
+
+.nav-list-link,
+.nav-list-link:visited,
+.hamburger-menu__list-link,
+.hamburger-menu__list-link:visited {
+  font-size: 1.4rem;
+  color: inherit;
+  font-weight: 500;
+  padding: 0 1.6rem;
+}
+.nav-icons,
+.nav-icons:visited {
+  color: #555;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+
+.nav-list-link:hover {
+  color: #e52b16;
+}
+
+.icon-inner-container {
+  display: flex;
+  gap: 2.4rem;
+  margin-right: auto;
+  transition: all 0.1s ease-in-out;
+}
+.icon-container--search {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #555;
+}
+.icon-container--search {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+.icon-container--cart-icon {
+  position: relative;
+}
+.icon-container--cart-icon .cart-count {
+  position: absolute;
+  top: -1.4rem;
+  right: -1.4rem;
+  background-color: #b01e0d;
+  padding: 0.6rem 0.8rem;
+  color: #fff;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  font-weight: 600;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.search-icon-input {
+  padding: 0.2rem 0.8rem !important;
+  border: none;
+  max-width: 80%;
+  margin-left: 1.6rem;
+  font-family: inherit;
+  background-color: #fcfcfc;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.09%);
+  transition: all 0.1s ease-in-out;
+  transform-origin: left;
+}
+
+.search-icon-input:focus {
+  outline-color: #e52b16;
+}
+
+.visible {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hidden {
+  opacity: 0;
+  transform: scale(0);
+}
+.loginpage {
+  padding-top: 5%;
+  width: 50%;
+  margin: 0 auto;
+}
+
+/* Bordered form */
+form {
+  border: 1px solid #555;
+}
+
+/* Full-width inputs */
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04aa6d;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* Add a hover effect for buttons */
+button:hover {
+  opacity: 0.5;
+  background-color: rgb(24, 24, 2);
+  background-image: linear-gradient(red, green);
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  padding-left: 25%;
+  height: 50%;
+  width: 50%;
+}
+
+/* Avatar image */
+img.avatar {
+
+margin-left: 70px;
+  justify-content: center;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+.signup {
+  text-align: center;
+}
+
+.space_between{
+  padding-top: 30px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 600px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+  .loginpage {
+    padding-top: 5%;
+    padding-left: 11%;
+    width: 80%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/loginsign.css" />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
+    <title>Signin</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+     <!-- Navigation -->
+    <div class="navbar-container">
+      <nav class="navbar">
+        <div class="logo-box">
+          <a href="/index.html" class="logo">AHMS</a>
+        </div>
+
+            <ul class="nav-list">
+              <li class="nav-list-item">
+                <a href="men.html" class="nav-list-link">Men</a>
+              </li>
+
+              <li class="nav-list-item">
+                <a href="women.html" class="nav-list-link">Women</a>
+              </li>
+
+              <li class="nav-list-item">
+                <a href="beauty.html" class="nav-list-link">Beauty</a>
+              </li>
+
+              <li class="nav-list-item">
+                <a href="kids.html" class="nav-list-link">Kids</a>
+              </li>
+
+              <li class="nav-list-item">
+                <a href="contactpage.html" class="nav-list-link">Contact us</a>
+              </li>
+            </ul>
+
+            <div class="icon-container">
+              <div class="icon-container--search">
+                <a class="search-icon nav-icons" href="#">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+
+                <input class="search-icon-input hidden" type="text" />
+              </div>
+
+              <div class="icon-inner-container">
+                <div class="icon-container--user-icon">
+                  <a href="#" class="user-icon nav-icons">
+                    <i class="fa-regular fa-user"></i>
+                  </a>
+                </div>
+
+                <div class="icon-container--fav-icon">
+                  <a class="fav-icon nav-icons" href="#">
+                    <i class="fa-regular fa-heart"></i>
+                  </a>
+                </div>
+
+            <div class="icon-container--cart-icon">
+              <a class="cart-icon nav-icons" href="#">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    <div class="loginpage">
+      <form action="action_page.php" method="post">
+        <div class="imgcontainer">
+          <img src="images/icon.jpeg" alt="Avatar" class="avatar" />
+        </div>
+        <div class="container">
+
+          <label for="fname"><b>First Name</b></label>
+          <input
+            type="text"
+            id="fname"
+            placeholder="Enter your first name"
+            name="fname"
+            required
+          />
+          <span>*</span>
+          <br>
+
+
+          <label for="lname"><b>Second Name</b></label>
+          <input
+            type="text"
+            id="lname"
+            placeholder="Enter your second name"
+            name="lname"
+            required
+          />
+          <span>*</span>
+          <br>
+
+
+          <label for="username"><b>User Name</b></label>
+          <input
+            type="text"
+            id="username"
+            placeholder="Enter your username"
+            name="username"
+            required
+          />
+          <span>*</span>
+          <br>
+
+
+          <label for="email"><b>Email</b></label>
+          <input
+            type="text"
+            id="email"
+            placeholder="Enter email"
+            name="email"
+            required
+          />
+          <span>*</span>
+          <br>
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="text"
+            id="psw"
+            placeholder="Enter Your Password"
+            name="psw"
+            required
+          />
+          <span>*</span>
+          <br>
+
+          <button type="signbtn" id="signbtn">Sign Up</button>
+          <label>
+
+
+          
+          <span class="signup"
+            >Already have an AHMS account?
+            <a href="http://127.0.0.1:5501/login.html">Login here</a></span
+          >
+        </div>
+
+        <div class="container" style="background-color: #f1f1f1">
+          <button type="button" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
+    </div>
+    <script src="js/signuppage.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
