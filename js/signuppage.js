@@ -1,7 +1,7 @@
 let $ = (selector) => document.querySelector(selector);
 
 window.onload = function () {
-  $("#signbtn").onclick = validate;
+  $("#signup1").onclick = validate;
 };
 
 function validate() {

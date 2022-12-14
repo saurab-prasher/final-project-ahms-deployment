@@ -1,3 +1,4 @@
+"use strict";
 console.log("hello world!");
 
 const hamburgerBtn = document.querySelector(".hamburger-icon");
@@ -9,7 +10,11 @@ const pageTitle = document.querySelector("title")?.textContent;
 const productBtnContainer = document.querySelector(".product__btn-container");
 const newsPromotionForm = document.querySelector(".news-promotions__form");
 const addToCartBtn = document.querySelector(".product__cart-btn");
-let totalCartCount = 0;
+
+let totalCartCount = localStorage.getItem("totalCart") || 0;
+document.querySelector(".cart-count").textContent = totalCartCount;
+
+let cartLocalStorage;
 
 searchIcon.addEventListener("click", () => {
   if (input.classList.contains("visible")) {
@@ -23,14 +28,10 @@ searchIcon.addEventListener("click", () => {
 });
 
 hamburgerBtn.addEventListener("click", () => {
-  hamburgerMenu.classList.add("visible");
-  hamburgerMenu.classList.remove("hidden");
-  document.body.classList.add("stop-scrolling");
+  hamburgerMenu.classList.toggle("hamburgerMenu--display");
 });
 hamburgerClose.addEventListener("click", () => {
-  hamburgerMenu.classList.add("hidden");
-  hamburgerMenu.classList.remove("visible");
-  document.body.classList.remove("stop-scrolling");
+  hamburgerMenu.classList.toggle("hamburgerMenu--display");
 });
 
 const changeColorMultipleElem = (element, color) => {
@@ -131,20 +132,22 @@ function validate(e) {
   email.value = "";
 }
 
-newsPromotionForm.addEventListener("submit", validate);
+newsPromotionForm?.addEventListener("submit", validate);
 
 productBtnContainer?.addEventListener("click", (e) => {
-  const span = document.createElement("span");
-  span.classList.add("cart-count");
-  document.querySelector(".show-quantity").textContent = totalCartCount;
+  document.querySelector(".cart-count").textContent = totalCartCount;
+
   if (e.target.classList.contains("add")) {
     totalCartCount++;
     document.querySelector(".cart-count").textContent = totalCartCount;
     document.querySelector(".show-quantity").textContent = totalCartCount;
+    localStorage.setItem("totalCart", totalCartCount);
   } else if (e.target.classList.contains("minus")) {
     if (totalCartCount > 0) {
       totalCartCount--;
+      localStorage.setItem("totalCart", totalCartCount);
       document.querySelector(".cart-count").textContent = totalCartCount;
+      document.querySelector(".show-quantity").textContent = totalCartCount;
     }
   }
 });

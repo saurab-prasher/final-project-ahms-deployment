@@ -9,8 +9,7 @@ function validate() {
   let password = $('#psw');
   let namepattern = /^[a-zA-z]{2,30}$/;
   let passpattern  = /^[a-zA-Z0-9!@#$%^&*]{6,16}$/;
-
-  //   console.dir(namepattern);
+  
 
   if (username.value == '') {
     username.nextElementSibling.innerHTML = 'Please enter your username';

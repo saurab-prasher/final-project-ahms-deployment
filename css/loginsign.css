@@ -13,7 +13,7 @@ html {
   font-size: 62.5%;
 }
 
-@media only screen and (max-width: 75em) {
+@media only screen and (max-width: 650px) {
   html {
     font-size: 56.25%;
   }
@@ -52,21 +52,18 @@ img {
 
 a {
   text-decoration: none;
+  color: #555;
 }
 
 .container {
   margin: 0 auto;
-  max-width: 125rem;
-  /* BRO PLEASE CHECK IF max-height THIS IS BEEN USED OR NOT, IF NOT THEN REMOVE IT  */
-  max-height: 140rem;
+  font-size: 20px;
   padding: 0rem 6.4rem;
+
 }
 
 ul {
   list-style-type: none;
-}
-a {
-  text-decoration: none;
 }
 
 button {
@@ -131,7 +128,7 @@ button {
   font-size: 2.4rem;
 }
 
-@media screen and (max-width: 48em) {
+@media screen and (max-width: 400px) {
   .container {
     padding: 0rem 3.2rem;
   }
@@ -149,7 +146,7 @@ button {
   }
 }
 
-@media screen and (max-width: 35em) {
+@media screen and (max-width: 600px) {
   .home__header-track-order {
     display: none;
   }
@@ -221,7 +218,6 @@ button {
   font-size: 1.8rem;
   cursor: pointer;
 }
-
 
 .nav-list-link:hover {
   color: #e52b16;
@@ -356,8 +352,7 @@ button:hover {
 
 /* Avatar image */
 img.avatar {
-
-margin-left: 70px;
+  margin-left: 70px;
   justify-content: center;
 }
 
@@ -370,7 +365,7 @@ span.psw {
   text-align: center;
 }
 
-.space_between{
+.space_between {
   padding-top: 30px;
 }
 
@@ -389,4 +384,9 @@ span.psw {
     width: 80%;
     text-align: center;
   }
+
+}
+@media screen and (max-width: 600px) {
+
+
 }

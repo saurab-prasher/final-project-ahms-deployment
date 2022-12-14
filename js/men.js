@@ -9,6 +9,10 @@ const reviewBtn = document.querySelector(".review__btn");
 
 const reviewSubmit = document.querySelector(".form-review-submit");
 
+totalCartCount = localStorage.getItem("totalCart") || 0;
+document.querySelector(".show-quantity").textContent = totalCartCount;
+document.querySelector(".cart-count").textContent = totalCartCount;
+
 const imageGalleryArray = [
   {
     id: 1,
@@ -65,7 +69,6 @@ imageGalleryArray.forEach(({ src, alt, description, price }) => {
 
   newImage.addEventListener("click", (e) => {
     const elem = e.target;
-    console.log(elem);
     displayedImageMain.setAttribute("src", elem.getAttribute("src"));
     productHeading.textContent = alt;
     productDescription.textContent = description;

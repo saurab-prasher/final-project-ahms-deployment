@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/2fa0545c9d.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/loginsign.css" />
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <title>Login</title>
@@ -67,16 +71,18 @@
         </ul>
       </header>
       <!-- Hamburger navigation -->
-      <div class="hamburger-container">
-        <div class="logo-box">
-          <a href="/index.html" class="logo">AHMS</a>
-        </div>
 
-        <div class="hamburger-menu">
+      <div class="hamburger-container">
+        <div class="hamburger-inner-container">
+          <div class="logo-box">
+            <a href="/index.html" class="logo">AHMS</a>
+          </div>
+
           <button class="hamburger-icon">
             <i class="fa-solid fa-bars"></i>
           </button>
-        
+        </div>
+        <div class="hamburger-menu">
           <!-- Hamburger Menu -->
           <ul class="hamburger-menu__list">
             <button class="hamburger-icon hamburger-icon-close">
@@ -178,7 +184,7 @@
               name="uname"
               required
             />
-            <span>*</span><br />
+            <span></span><br />
             <label for="psw"><b>Password</b></label>
             <input
               type="password"
@@ -187,7 +193,7 @@
               name="psw"
               required
             />
-            <span>*</span>
+            <span></span>
             <button type="submit" id="submit">Login</button>
             <label>
               <input type="checkbox" checked="checked" name="remember" />
@@ -196,16 +202,18 @@
             <br /><br />
             <span class="signup"
               >Don't Have an AHMS account?
-              <a href="http://127.0.0.1:5501/signup.html">Sign Up here</a></span
+              <a href="signup.html">Sign Up here</a></span
             >
           </div>
           <div class="container" style="background-color: #f1f1f1">
-            <button type="button" class="cancelbtn">Cancel</button>
+          <a><button href="index.html" type="button" class="cancelbtn">Cancel</button></a>
             <span class="psw">Forgot <a href="#">password?</a></span>
           </div>
         </form>
       </div>
     </div>
+    
     <script src="js/loginsignup.js"></script>
+
   </body>
 </html>

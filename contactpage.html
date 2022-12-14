@@ -9,12 +9,11 @@
       src="https://kit.fontawesome.com/2fa0545c9d.js"
       crossorigin="anonymous"
     ></script>
-
     <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
-
     <title>Contact Page</title>
   </head>
   <body>
+    <!-- header -->
     <div class="container">
       <header class="home__header">
         <div class="home__header-shipping">
@@ -23,13 +22,11 @@
             worldwide for all orders over <span>$199</span> 🎉
           </p>
         </div>
-
         <div class="home__header-track-order">
           <a class="nav-list-link track-order-link" href="#"
             >Track Your Order</a
           >
         </div>
-
         <ul class="home__header-social-icons">
           <li>
             <a
@@ -75,14 +72,16 @@
 
       <!-- Hamburger navigation -->
       <div class="hamburger-container">
-        <div class="logo-box">
-          <a href="/index.html" class="logo">AHMS</a>
-        </div>
+        <div class="hamburger-inner-container">
+          <div class="logo-box">
+            <a href="/index.html" class="logo">AHMS</a>
+          </div>
 
-        <div class="hamburger-menu">
           <button class="hamburger-icon">
             <i class="fa-solid fa-bars"></i>
           </button>
+        </div>
+        <div class="hamburger-menu">
           <!-- Hamburger Menu -->
           <ul class="hamburger-menu__list">
             <button class="hamburger-icon hamburger-icon-close">
@@ -150,7 +149,7 @@
 
             <div class="icon-inner-container">
               <div class="icon-container--user-icon">
-                <a href="http://127.0.0.1:5500/login.html" class="user-icon nav-icons">
+                <a href="login.html" class="user-icon nav-icons">
                   <i class="fa-regular fa-user"></i>
                 </a>
               </div>
@@ -171,10 +170,9 @@
           </div>
         </nav>
       </div>
-    </div>
-    <!-- products -->
-    
-    <div class="container">
+
+      <!-- content- questions -->
+
       <div class="space_between"><p></p></div>
       <div class="maincontent">
         <h2>How do I change my account email?</h2>
@@ -239,39 +237,32 @@
         </h2>
         <a href="#">Learn More>></a>
       </div>
-      <div class="container">
-        <div class="row">
-          <h1>Contact us!</h1>
-        </div>
-         <br><br>
-        <h1><form id="success_message">
+
+      <!-- form -->
+      <form id="success_message">
         <div class="row">
           <h2 style="text-align: center">We'd love to hear from you!</h2>
+          <input type="text" id="name" required />
+          <label>Name</label>
+          <input type="text" id="email" required />
+          <label>Email</label>
+          <input type="text" id="phnb" required />
+          <label>Phone Number</label>
+          <textarea id="message" required></textarea>
+          <label>Message</label>
         </div>
-       
-              <input type="text" id="name" required />
-              <label>Name</label>
-              <span>*</span>
-       
-              <input type="text" id="email" required />
-              <label>Email</label>
-              <span id="email_validate">*</span>
-              <input type="text" id="phnb" required />
-              <label>Phone Number</label>
-              <span>*</span>
-          
-              <textarea id="message" required></textarea>
-              <label>Message</label>
-              <span>*</span>
-           <br>
-            <button class="submit-btn" id="submitbtn" onclick="let temp = validate(); showInput(); return temp;">Send Message</button>
-          </form>
-          </div>
-        </div>
-      </div>
-    </div>
 
-    <div class="container">
+        <button
+          class="submit-btn"
+          id="submitbtn"
+          onclick="let temp =  showInput(); validate(); return temp;"
+        >
+          Send Message
+        </button>
+      </form>
+
+      <!-- footer -->
+
       <footer class="footer">
         <div>
           <div class="footer__logo-box">
@@ -380,8 +371,7 @@
         </div>
       </footer>
     </div>
-
     <script src="js/main.js"></script>
-    <script src="js/contactpage.js" ></script>
+    <script src="js/contactpage.js"></script>
   </body>
 </html>

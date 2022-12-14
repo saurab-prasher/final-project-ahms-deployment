@@ -47,7 +47,7 @@ body {
 
 img {
   display: block;
-  max-width: 150%;
+  width: 150%;
 }
 
 a {
@@ -74,14 +74,20 @@ a {
 }
 
 button {
+  font-family: inherit;
+  cursor: pointer;
+  height: 45px;
+  width: 90px;
+  background-color: #b01e0d;
+
+}
+.add-to-CartBtn {
   height: 50px;
   width: 93px;
-
   font-family: inherit;
   cursor: pointer;
   background-color: #b01e0d;
 }
-
 .checked {
   color: orange;
 }
@@ -181,9 +187,6 @@ button .add {
   position: relative;
   color: #fff;
 }
-.hamburger-container {
-  display: none;
-}
 
 .navbar {
   display: flex;
@@ -201,6 +204,9 @@ button .add {
   margin: 0 auto 0 6.4rem;
 }
 
+.hamburger-inner-container {
+  display: none;
+}
 @media screen and (max-width: 60em) {
   .navbar-container {
     display: none;
@@ -208,11 +214,9 @@ button .add {
   .icon-container {
     display: none;
   }
-  .hamburger-container {
+  .hamburger-inner-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    z-index: 11;
   }
 }
 
@@ -231,7 +235,6 @@ button .add {
   font-size: 1.8rem;
   cursor: pointer;
 }
-
 
 .nav-list-link:hover {
   color: #e52b16;
@@ -319,17 +322,21 @@ button .add {
   width: 100%;
   padding: 9.6rem;
   padding-top: 12.4rem;
+  font-size: 1.8rem;
+  color: #fff;
+  display: none;
+}
+
+.hamburgerMenu--display {
   display: flex;
   gap: 2.4rem;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  font-size: 1.8rem;
-  color: #fff;
 }
 
 .hamburger-icon {
-  background-color: #000;
+  background-color: transparent;
   color: #fff;
   border-radius: 3px;
   font-size: 2.4rem;
@@ -500,7 +507,7 @@ address.contacts a {
 .products {
   text-align: center;
 }
-h1{
+h1 {
   color: #04aa6d;
 }
 .products h1 {
@@ -544,22 +551,51 @@ h1{
 .card button:hover {
   opacity: 0.7;
 }
-
-/* sdvsvs */
-
 /* csdcsdcs */
 
 @media screen and (max-width: 600px) {
   .header {
-    display: flex;
+   
     text-align: left;
     color: #fff;
     font-size: 1.2rem;
+   
+  }
+  .newspromotionsform{
+    text-align: left;
   }
   .navbar-container {
     text-align: left;
-
     margin: 0%;
     padding: 0%;
   }
+}
+
+@media screen and (max-width: 600px) {
+  .slidebox{
+    display: none;
+
+  }
+}
+
+
+
+
+
+/* news and promotion section */
+
+.promotions_and_news{
+
+  background-color: aqua;
+  text-align: center;
+  padding: 11px;
+  font-size: 25px;
+ 
+  
+}
+.newspromotionsform{
+  padding: 30px;
+}
+.news_sub_button{
+  padding-top: 28px;
 }

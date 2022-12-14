@@ -18,7 +18,7 @@
     />
 
     <link rel="stylesheet" href="css/main.css" />
-    <script src="js/main.js" defer></script>
+
     <title>AHMS</title>
   </head>
   <body>
@@ -136,7 +136,7 @@
                 <div class="icon-container--cart-icon">
                   <a class="cart-icon nav-icons" href="#">
                     <i class="fa-solid fa-cart-shopping"></i>
-                    <span class="cart-count">0</span>
+                    <span class="cart-count"></span>
                   </a>
                 </div>
               </div>
@@ -145,15 +145,18 @@
         </div>
 
         <!-- Hamburger navigation -->
-        <div class="hamburger-container">
-          <div class="logo-box">
-            <a href="/index.html" class="logo">AHMS</a>
-          </div>
 
-          <div class="hamburger-menu">
+        <div class="hamburger-container">
+          <div class="hamburger-inner-container">
+            <div class="logo-box">
+              <a href="/index.html" class="logo">AHMS</a>
+            </div>
+
             <button class="hamburger-icon">
               <i class="fa-solid fa-bars"></i>
             </button>
+          </div>
+          <div class="hamburger-menu">
             <!-- Hamburger Menu -->
             <ul class="hamburger-menu__list">
               <button class="hamburger-icon hamburger-icon-close">
@@ -485,16 +488,17 @@
         </div>
       </footer>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/main.js"></script>
   </body>
-  <script
-    src="https://code.jquery.com/jquery-3.6.1.min.js"
-    integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-    crossorigin="anonymous"
-  ></script>
-  <script
-    src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
-    integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  ></script>
 </html>
