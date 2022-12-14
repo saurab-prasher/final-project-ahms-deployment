@@ -8,15 +8,13 @@ function Slides() {
     slides[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > slides.length) {slideIndex = 1}
-  slides[slideIndex-1].style.display = "block";
-  setTimeout(Slides, 2000); 
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  slides[slideIndex - 1].style.display = "block";
+  setTimeout(Slides, 2000);
   // Change image every 1 seconds
 }
-
-
-
-
 
 function showInput() {
   if (!email.value == "") {
@@ -27,17 +25,15 @@ function showInput() {
   }
 }
 
-window.onload = function () {
-  document.getElementById('#subs').onclick = validate;
-};
-validate();
+// window.onload = function () {
+//   document.getElementById('#subs').onclick = validate;
+// };
+// validate();
 
-
-function validate() {
-  let email = document.getElementById("#email");
-  let name = document.getElementById("#name");
-  let phonenum = document.getElementById("#phnb");
-
+function validate1() {
+  let email = document.querySelector("#email");
+  let name = document.querySelector("#name");
+  let phonenum = document.querySelector("#phnb");
 
   let namepattern = /^[a-zA-Z]+ [a-zA-Z]+$/;
   let emailpattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
@@ -56,7 +52,7 @@ function validate() {
   } else if (!namepattern.test(name.value)) {
     name.nextElementSibling.innerHTML = "Please enter your correct name ";
   }
-alert("efve");
+
   if (phonenum.value == "") {
     phonenum.nextElementSibling.innerHTML = "Please enter your phone number";
   } else if (!phonenumpattern.test(phonenum.value)) {
@@ -65,8 +61,9 @@ alert("efve");
   }
 }
 
-
-
-
-
-
+document
+  .querySelector(".newspromotionsform")
+  .addEventListener("submit", (e) => {
+    e.preventDefault();
+    validate1();
+  });

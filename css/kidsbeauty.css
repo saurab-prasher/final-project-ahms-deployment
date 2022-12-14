@@ -79,7 +79,6 @@ button {
   height: 45px;
   width: 90px;
   background-color: #b01e0d;
-
 }
 .add-to-CartBtn {
   height: 50px;
@@ -555,13 +554,11 @@ h1 {
 
 @media screen and (max-width: 600px) {
   .header {
-   
     text-align: left;
     color: #fff;
     font-size: 1.2rem;
-   
   }
-  .newspromotionsform{
+  .newspromotionsform {
     text-align: left;
   }
   .navbar-container {
@@ -572,30 +569,28 @@ h1 {
 }
 
 @media screen and (max-width: 600px) {
-  .slidebox{
+  .slidebox {
     display: none;
-
   }
 }
 
-
-
-
-
 /* news and promotion section */
 
-.promotions_and_news{
-
+.promotions_and_news {
   background-color: aqua;
   text-align: center;
   padding: 11px;
   font-size: 25px;
- 
-  
 }
-.newspromotionsform{
+.newspromotionsform {
   padding: 30px;
 }
-.news_sub_button{
+
+.newspromotionsform span {
+  display: inline-block;
+  color: red;
+  margin: 10px 0;
+}
+.news_sub_button {
   padding-top: 28px;
 }

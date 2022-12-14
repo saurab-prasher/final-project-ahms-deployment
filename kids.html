@@ -389,47 +389,56 @@
           <p class="price">Price: $20.99</p>
           <button>Add to Cart</button>
         </div>
-  
+
         <div class="promotions_and_news">
-          <p id="heading-news-promotions" >News and Promotions</p>
-        <span id="success_messsage" >
-     
+          <p id="heading-news-promotions">News and Promotions</p>
+          <span id="success_messsage"> </span>
+
           <form class="newspromotionsform">
             <div class="emaill">
-            <input
-              type="text"
-              name="emaill"
-              class="news-promotions-email"
-              placeholder="Your Email"
-              id="email"
-            /> <span></span></div></form>
-            <form class="newspromotionsform">
-            <div class="namee" >
-            <input
-            type="text"
-            name="namee"
-            class="news-promotions-name"
-            placeholder="Your phone number"
-            id="name"
-          /> <span></span> </div></form>
-          <form class="newspromotionsform">
-            <div class="phnbb" ></div>
-            <input
-              type="text"
-              name="phnbb"
-              class="news-promotions-lname"
-              placeholder="Your last name"
-              id="phnb"
-            /> <span></span>
+              <input
+                type="text"
+                name="emaill"
+                class="news-promotions-email"
+                placeholder="Your Email"
+                id="email"
+              />
+              <span></span>
+            </div>
+
+            <div class="namee">
+              <input
+                type="text"
+                name="namee"
+                class="news-promotions-name"
+                placeholder="Full name"
+                id="name"
+              />
+
+              <span></span>
+            </div>
+
+            <div class="phnbb">
+              <input
+                type="text"
+                name="phnbb"
+                class="news-promotions-lname"
+                placeholder="Your phone number "
+                id="phnb"
+              />
+              <span></span>
+            </div>
+
+            <button
+              onclick="let temp = showInput();  return temp;"
+              type="submit"
+              id="subs"
+            >
+              Subscribe
+            </button>
           </form>
-      </div>
-            <button onclick="let temp = showInput(); validate(); return temp;" type="submit" id="subs" >Subscribe</button>
-      </span>
-          </div>
+        </div>
 
-
-
-          
         <!-- footer -->
 
         <footer class="footer">
